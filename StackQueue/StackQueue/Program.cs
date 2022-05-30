@@ -32,25 +32,28 @@ switch (ds)
         }
         break;
     case 2:
-        Console.WriteLine("Queue Operations\n0.Exit\n1.Enqueue\n2.Display\nEnter your choice:");
+        Console.WriteLine("Queue Operations\n0.Exit\n1.Enqueue\n2.Dequeue\n3.Display\nEnter your choice:");
         int ch = Convert.ToInt32(Console.ReadLine());
         while (ch != 0)
         {
             switch (ch)
             {
                 case 1:
-                    Console.WriteLine("Enter data to add in Stack: ");
+                    Console.WriteLine("Enter data to add in Queue: ");
                     int data = Convert.ToInt32(Console.ReadLine());
                     queue.Enqueue(data);
                     break;
                 case 2:
+                    queue.Dequeue();
+                    break;
+                case 3:
                     queue.Display();
                     break;
                 default:
                     Console.WriteLine("Invalid choice.");
                     break;
             }
-            Console.WriteLine("Queue Operations\n0.Exit\n1.Enqueue\n2.Display\nEnter your choice:");
+            Console.WriteLine("Queue Operations\n0.Exit\n1.Enqueue\n2.Dequeue\n3.Display\nEnter your choice:");
             ch = Convert.ToInt32(Console.ReadLine());
         }
         break;

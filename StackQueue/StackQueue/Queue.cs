@@ -27,7 +27,7 @@ namespace StackQueue
         }
         public void Display()
         {
-            Node temp = head;
+            Node temp = this.head;
             if (temp == null)
                 Console.WriteLine("Queue is empty.");
             else
@@ -38,6 +38,17 @@ namespace StackQueue
                     temp = temp.next;
                 }
             }
+        }
+        public void Dequeue()
+        {
+            if (this.head == null)
+            {
+                Console.WriteLine("Queue is empty.");
+                return;
+            }
+            Console.WriteLine(this.head.data + " is removed from queue.");
+            this.head = this.head.next;
+            
         }
     }
 }
